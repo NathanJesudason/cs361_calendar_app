@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Calendar App</title>
+		<link rel="stylesheet" href="/style.css" charset="utf-8" defer>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
+
+		<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.runtime.js" charset="utf-8" defer></script>
+        <script src="/index.js" charset="utf-8" defer></script>
+
+	</head>
+
+	<body id="body">
+		
+		<header id="header-bar">
+            <div id="header-buttons">
+                <button type="button" id="add-event"><i class="fas fa-plus"></i></button>
+                <button type="button" id="search"><i class="fas fa-question"></i></button>
+                <button type="button" id="setting"><i class="fas fa-cog"></i></button>
+            </div>
+        </header>
+            <table style="width: 100%">
+                <colgroup>
+                    <col style="width: 9%">
+                    <col style="width: 13%">
+                    <col style="width: 13%">
+                    <col style="width: 13%">
+                    <col style="width: 13%">
+                    <col style="width: 13%">
+                    <col style="width: 13%">
+                    <col style="width: 13%">
+                </colgroup>
+                <tr>
+                    <th></th>
+                    {{> dayTitle name="Monday"}}
+                    {{> dayTitle name="Tuesday"}}
+                    {{> dayTitle name="Wednesday"}}
+                    {{> dayTitle name="Thursday"}}
+                    {{> dayTitle name="Friday"}}
+                    {{> dayTitle name="Saturday"}}
+                    {{> dayTitle name="Sunday"}}
+                </tr>
+	
+
+	{{{body}}}
+
+    </table>
+
+	</body>
+
+</html>

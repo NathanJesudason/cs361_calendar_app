@@ -1,0 +1,82 @@
+<main class="content" id="homepage-material">
+	
+	<div id="Calendar">
+        {{> calHour hour=0}}
+        {{> calHour hour=1}}
+        {{> calHour hour=2}}
+        {{> calHour hour=3}}
+        {{> calHour hour=4}}
+        {{> calHour hour=5}}
+        {{> calHour hour=6}}
+        {{> calHour hour=7}}
+        {{> calHour hour=8}}
+        {{> calHour hour=9}}
+        {{> calHour hour=10}}
+        {{> calHour hour=11}}
+        {{> calHour hour=12}}
+        {{> calHour hour=13}}
+        {{> calHour hour=14}}
+        {{> calHour hour=15}}
+        {{> calHour hour=16}}
+        {{> calHour hour=17}}
+        {{> calHour hour=18}}
+        {{> calHour hour=19}}
+        {{> calHour hour=20}}
+        {{> calHour hour=21}}
+        {{> calHour hour=22}}
+        {{> calHour hour=23}}
+
+	</div>
+
+	<div id="add-event-modal" style="display: none;">
+		<div id="modal-backdrop"></div>
+		<div class = "modal-content">
+			<div class = "modal-header">
+				<h3>Add Event</h3>
+				<button id='modal-close-button'><i class="fas fa-window-close"></i></button>
+				{{!-- <button type="button" id="modal-close" class="modal-hide-button"></button> --}}
+			</div>
+			<div class="modal-body">
+				<div id="new-class-name-form">
+					<label for="new-event-name-input" class="new-event-name-input-label">Name of New Event</label>
+					<input type="text" name="new-event-name-input" id="new-event-name-input">
+                    {{!-- Change from numbers to drop-down later --}}
+                    <label for="new-event-day-input" class="new-event-day-input-label">day of New Event</label>
+					<select name="new-event-day-input" id="new-event-day-input">
+                        <option value="Mon">Monday</option>
+                        <option value="Tues">Tuesday</option>
+                        <option value="Weds">Wednesday</option>
+                        <option value="Thurs">Thursday</option>
+                        <option value="Fri">Friday</option>
+                        <option value="Sat">Saturday</option>
+                        <option value="Sun">Sunday</option>
+                    </select>
+
+                    <label for="new-event-hour-input" class="new-event-hour-input-label">hour of New Event</label>
+					<input type="number" name="new-event-hour-input" id="new-event-hour-input" min="0" max="23">
+
+                    <label for="new-event-length-input" class="new-event-length-input-label">length of New Event</label>
+					<input type="number" name="new-event-length-input" id="new-event-length-input" min="1" max="24">
+
+                    <form id="new-event-color-input">
+                        <p>Color: </p>
+                        <div>
+                            <label> White
+                            <input class="new-event-color-radio" type="radio" name="color" value="White" checked>
+                            </label>
+                            <label> Red
+                            <input class="new-event-color-radio" type="radio" name="color" value="Red">
+                            </label>
+                            <label> Blue
+                            <input class="new-event-color-radio" type="radio" name="color" value="Blue">
+                            </label>
+                        </div>
+                    </form>
+
+					<button type="button" id="add-new-event-button">Add Event</button>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</main>

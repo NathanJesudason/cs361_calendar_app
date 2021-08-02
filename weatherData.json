@@ -1,0 +1,30 @@
+{
+    "Monday": {
+        "Weather": "Sunny",
+        "Temperature": 70
+    },
+    "Tuesday": {
+        "Weather": "Cloudy",
+        "Temperature": 60
+    },
+    "Wednesday": {
+        "Weather": "Rain",
+        "Temperature": 50
+    },
+    "Thursday": {
+        "Weather": "Snow",
+        "Temperature": 44
+    },
+    "Friday": {
+        "Weather": "Partly Cloudy",
+        "Temperature": 55
+    },
+    "Saturday": {
+        "Weather": "Fog",
+        "Temperature": 53
+    },
+    "Sunday": {
+        "Weather": "Thunderstorm",
+        "Temperature": 60
+    }
+}
