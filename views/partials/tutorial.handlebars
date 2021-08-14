@@ -1,0 +1,35 @@
+<div id="tutorial-modal" style="display: none;">
+    <div class="modal-backdrop"></div>
+	<div class = "modal-content">
+        <div id="tutorial-sidebar">
+            <button id="tutorial-close-button"><i class="fas fa-window-close"></i></button>
+            <button class="tutorial-page-button" id="tutorial-create-events">How to Create Events</button>
+            {{!--<button class="tutorial-page-button" id="tutorial-settings-guide"></button>--}}
+            <button class="tutorial-page-button" id="tutorial-system-benefits">Benefits of System</button>
+            <button class="tutorial-page-button" id="tutorial-settings">How to change settings</button>
+        </div>
+
+        <div class="tutorial-page" id="tutorial-create-events-page">
+            <h1>How to Create Events</h1>
+            <p>These are the ways you can create events: </p>
+            <ul>
+                <li>Copying an event (click copy symbol on an event, then click an hour cell to paste)</li>
+                <li>Create event modal (plus symbol on top of page, then fill out the event modal)</li>
+                <li>Double click on an hour cell, which populates the event modal, then fill out the rest</li>
+            </ul>
+        </div>
+        <div class="tutorial-page" id="tutorial-system-benefits-page" style="display: none;">
+            <h1>What is the use case of this application?</h1>
+            <p>The calendar app is intended for someone that has a fairly stable weekly schedule that wants to block out time for events</p>
+        </div>
+        <div class="tutorial-page" id="tutorial-settings-page" style="display: none;">
+            <h1>Settings</h1>
+            <p>You can change the settings by clicking on the gear button on the top of the screen, <br> 
+                there you can change whether time is presented in 24 hour time or 12 hour time,  <br>
+                whether the units for temperature are in celsius or farenheit, <br>
+                and whether you have to confirm before deleting a task
+            </p>
+        </div>
+    </div>
+
+</div>

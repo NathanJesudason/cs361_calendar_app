@@ -1,5 +1,4 @@
 <main class="content" id="homepage-material">
-	
 	<div id="Calendar">
         {{> calHour hour=0}}
         {{> calHour hour=1}}
@@ -25,11 +24,12 @@
         {{> calHour hour=21}}
         {{> calHour hour=22}}
         {{> calHour hour=23}}
-
 	</div>
 
+    {{> tutorial}}
+
 	<div id="add-event-modal" style="display: none;">
-		<div id="modal-backdrop"></div>
+		<div class="modal-backdrop"></div>
 		<div class = "modal-content">
 			<div class = "modal-header">
 				<h3>Add Event</h3>
@@ -72,6 +72,11 @@
                             </label>
                         </div>
                     </form>
+                    <div>
+                        <label for="new-desc-input">Notes</label>
+                        <textarea id="new-event-desc-input" rows="4" cols="70" style="margin-left: 25%;"></textarea>
+                    </div>
+
 
 					<button type="button" id="add-new-event-button">Add Event</button>
 				</div>
@@ -79,4 +84,107 @@
 		</div>
 
 	</div>
+
+    <div id="change-event-modal" style="display: none;">
+		<div class="modal-backdrop"></div>
+		<div class = "modal-content">
+			<div class = "modal-header">
+				<h3>Event Details</h3>
+				<button id='change-modal-close-button'><i class="fas fa-window-close"></i></button>
+				{{!-- <button type="button" id="modal-close" class="modal-hide-button"></button> --}}
+			</div>
+			<div class="modal-body">
+				<div id="change-class-name-form">
+					<label for="change-event-name-input" class="change-event-name-input-label">Name of Event</label>
+					<input type="text" name="change-event-name-input" id="change-event-name-input">
+                    {{!-- Change from numbers to drop-down later --}}
+                    <label for="change-event-day-input" class="change-event-day-input-label">day of Event</label>
+					<select name="change-event-day-input" id="change-event-day-input">
+                        <option value="Mon">Monday</option>
+                        <option value="Tues">Tuesday</option>
+                        <option value="Weds">Wednesday</option>
+                        <option value="Thurs">Thursday</option>
+                        <option value="Fri">Friday</option>
+                        <option value="Sat">Saturday</option>
+                        <option value="Sun">Sunday</option>
+                    </select>
+
+                    <label for="change-event-hour-input" class="change-event-hour-input-label">hour of Event</label>
+					<input type="number" name="change-event-hour-input" id="change-event-hour-input" min="0" max="23">
+
+                    <label for="change-event-length-input" class="change-event-length-input-label">length of Event</label>
+					<input type="number" name="change-event-length-input" id="change-event-length-input" min="1" max="24">
+
+                    <form id="change-event-color-input">
+                        <p>Color: </p>
+                        <div>
+                            <label> White
+                            <input id="change-event-color-White" class="change-event-color-radio" type="radio" name="color" value="White" checked>
+                            </label>
+                            <label> Red
+                            <input id="change-event-color-Red"  class="change-event-color-radio" type="radio" name="color" value="Red">
+                            </label>
+                            <label> Blue
+                            <input id="change-event-color-Blue"  class="change-event-color-radio" type="radio" name="color" value="Blue">
+                            </label>
+                        </div>
+                    </form>
+
+                    <div>
+                        <label for="change-desc-input">Notes</label>
+                        <textarea id="change-event-desc-input" rows="4" cols="70" style="margin-left: 25%;"></textarea>
+                    </div>
+
+					<button type="button" id="change-event-button"><i class="fas fa-plus"></i></button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <div id="settings-modal" style="display: none;">
+        <div class='modal-backdrop'></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Settings</h3>
+                <button id='settings-modal-close-button'><i class="fas fa-window-close"></i></button>
+            </div>
+            <div class="modal-body">
+                <form id="temperature-units">
+                    <p>Temperature Units</p>
+                    <div>
+                        <label> Celsius
+                            <input id="temperature-units-true" class="temperature-units-radio" type="radio" name="temp" value="false" checked>
+                        </label>
+                        <label> Farenheit
+                            <input id="temperature-units-false" class="temperature-units-radio" type="radio" name="temp" value="true">
+                        </label>
+                    </div>
+                </form>
+                <form id="confirm-on-delete">
+                    <p>Confirm when Deleting Event</p>
+                    <div>
+                        <label> Don't Confirm
+                            <input id="delete-confirm-false" class="confirm-on-delete-radio" type="radio" name="bool" value="false" checked>
+                        </label>
+                        <label> Confirm
+                            <input id="delete-confirm-true" class="confirm-on-delete-radio" type="radio" name="bool" value="true">
+                        </label>
+                    </div>
+                </form>
+                <form id="time-format">
+                    <p>Time Format</p>
+                    <div>
+                        <label> 24 Hour
+                            <input id='time-format-true' class="time-format-radio" type="radio" name="format" value="true" checked>
+                        </label>
+                        <label> 12 Hour
+                            <input id='time-format-false' class="time-format-radio" type="radio" name="format" value="false">
+                        </label>
+                    </div>
+                </form>
+            </div>
+            <button type="button" id="settings-confirm-button"><i class="fas fa-plus"></i></button>
+        </div>
+
+    </div>
 </main>
